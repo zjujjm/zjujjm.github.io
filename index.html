@@ -49,7 +49,7 @@
     <h1 class="title"><a href="/2015/04/02/a02-phase-theme-opt/">Phase Theme Optimization</a></h1>
   
 
-    <time datetime="2015-04-02T13:08:54.003Z">
+    <time datetime="2015-04-02T13:09:41.842Z">
   <span class="day">2</span><span class="month">Apr</span>
 </time>
   </header>
@@ -58,7 +58,7 @@
       <h2 id="Add_Google_Analylytics_Code">Add Google Analylytics Code</h2><p>The easiest way is to put Google’s Js code into one main js file, so that every page will include this source code.</p>
 <ol>
 <li><p>Create <code>google.anlysis.js</code> and this file in:</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">themes<span class="command">\phase</span><span class="command">\source</span><span class="command">\js</span><span class="command">\google</span>.anlysis.js</span><br><span class="line">themes<span class="command">\phase</span><span class="command">\source</span><span class="command">\js</span><span class="command">\google</span>.anlysis.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">..<span class="command">\themes</span><span class="command">\phase</span><span class="command">\source</span><span class="command">\js</span><span class="command">\google</span>.anlysis.js</span><br><span class="line">..<span class="command">\themes</span><span class="command">\phase</span><span class="command">\source</span><span class="command">\js</span><span class="command">\google</span>.anlysis.js</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Put Google source code into ‘google.anlysis.js’</p>
 </li>
@@ -66,6 +66,7 @@
 <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">..\themes\phase\layout\_partial\after_footer.ejs</span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> config.root </span>%&gt;<span class="xml"><span class="tag"><span class="value">js/google.anlysis.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>Done.</p>
 
     
     
