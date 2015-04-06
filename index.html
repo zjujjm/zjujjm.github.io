@@ -49,14 +49,14 @@
     <h1 class="title"><a href="/2015/04/06/a03-python-miscellaneous/">Python Learning Miscellaneous</a></h1>
   
 
-    <time datetime="2015-04-06T07:55:09.096Z">
+    <time datetime="2015-04-06T07:58:22.524Z">
   <span class="day">6</span><span class="month">Apr</span>
 </time>
   </header>
   <div class="entry-content">
     
       <p>Start to learn Python this week, from very fundamental knowledge. Mark issues I meet in this hard and happy process. :)</p>
-<h2 id="Encoding_for_Chinese">Encoding for Chinese</h2><p>Difference systems have different method of encoding. Windows is GBK and linux is UTF8. Whether Chinese can display normal is depended on the correct encoding<br>way. The translata method is:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l_example = <span class="string">"中文"</span> <span class="comment">#Original GBK</span></span><br><span class="line"><span class="keyword">print</span> l_example <span class="comment">#for Windos</span></span><br><span class="line"><span class="keyword">print</span> l_example.decode(<span class="string">'gbk'</span>).encode(<span class="string">'utf8'</span>) <span class="comment">#for Linux</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Encoding_for_Chinese">Encoding for Chinese</h2><p>Difference systems have different method of encoding. Windows is GBK and linux is UTF8. Whether Chinese can be displayed normally is depended on the correct encoding<br>way. The translata method is:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l_example = <span class="string">"中文"</span> <span class="comment">#Original GBK</span></span><br><span class="line"><span class="keyword">print</span> l_example <span class="comment">#for Windos</span></span><br><span class="line"><span class="keyword">print</span> l_example.decode(<span class="string">'gbk'</span>).encode(<span class="string">'utf8'</span>) <span class="comment">#for Linux</span></span><br></pre></td></tr></table></figure></p>
       <p class="article-more-link">
         <a href="/2015/04/06/a03-python-miscellaneous/#more">Read more</a>
       </p>
