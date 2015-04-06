@@ -49,7 +49,7 @@
     <h1 class="title"><a href="/2015/04/06/a02-phase-theme-opt/">Phase Theme Optimization</a></h1>
   
 
-    <time datetime="2015-04-06T07:41:57.438Z">
+    <time datetime="2015-04-06T07:43:11.462Z">
   <span class="day">6</span><span class="month">Apr</span>
 </time>
   </header>
@@ -70,7 +70,9 @@
 <h2 id="Add_Read_More">Add Read More</h2><p>Replace the below codes in <code>layout\_partial\article.ejs</code><br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (item.excerpt &amp;&amp; index)&#123; <span class="variable">%&gt;</span></span><br><span class="line">  &lt;<span class="variable">%-</span> item.excerpt <span class="variable">%&gt;</span></span><br><span class="line">&lt;% &#125; <span class="keyword">else</span> &#123; <span class="variable">%&gt;</span></span><br><span class="line">  &lt;<span class="variable">%-</span> item.content <span class="variable">%&gt;</span></span><br><span class="line">&lt;% &#125; <span class="variable">%&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>to<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (item.excerpt &amp;&amp; index)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">  </span>&lt;%-<span class="ruby"> item.excerpt </span>%&gt;<span class="xml">      </span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"article-more-link"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> config.root </span>%&gt;<span class="xml"><span class="tag"><span class="value"></span></span></span>&lt;%-<span class="ruby"> item.path </span>%&gt;<span class="xml"><span class="tag"><span class="value">#more"</span>&gt;</span></span>&lt;%=<span class="ruby"> <span class="string">'read more'</span> </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; <span class="keyword">else</span> &#123; </span>%&gt;<span class="xml"></span><br><span class="line">  </span>&lt;%-<span class="ruby"> item.content </span>%&gt;<span class="xml"></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <p>Usage of Read More: add <code>&lt;!--more--&gt;</code> in markdown file.</p>
-
+      <p class="article-more-link">
+        <a href="/2015/04/06/a02-phase-theme-opt/#more">Read more</a>
+      </p>
     
     
     <footer class="meta">

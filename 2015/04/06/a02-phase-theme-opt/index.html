@@ -9,7 +9,19 @@
   
   <meta name="description" content="Add Google Analylytics CodeThe easiest way is to put Google’s Js code into one main js file, so that every page will include this source code.
 
-Create">
+Create google.anlysis.js and this file in:
+1..\themes\phase\source\js\google.anlysis.js
+
+Put Google source code into google.anlysis.js
+
+Inculde google.anlysis.js in 
+12..\themes\phase\layout\_partial\after_footer.ejs&amp;lt;script src=&quot;&amp;lt;%- config.root %&amp;gt;js/google.anlysis.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+Done.
+Add Read MoreReplace the below codes in layout\_partial\article.ejs12345&amp;lt;% if (item.excerpt &amp;amp;&amp;amp; index)&amp;#123; %&amp;gt;  &amp;lt;%- item.excerpt %&amp;gt;&amp;lt;% &amp;#125; else &amp;#123; %&amp;gt;  &amp;lt;%- item.content %&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
+to12345678&amp;lt;% if (item.excerpt &amp;amp;&amp;amp; index)&amp;#123; %&amp;gt;  &amp;lt;%- item.excerpt %&amp;gt;        &amp;lt;p class=&quot;article-more-link&quot;&amp;gt;    &amp;lt;a href=&quot;&amp;lt;%- config.root %&amp;gt;&amp;lt;%- item.path %&amp;gt;#more&quot;&amp;gt;&amp;lt;%= &#39;read more&#39; %&amp;gt;&amp;lt;/a&amp;gt;  &amp;lt;/p&amp;gt;&amp;lt;% &amp;#125; else &amp;#123; %&amp;gt;  &amp;lt;%- item.content %&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
+Usage of Read More: add &amp;lt;!--more--&amp;gt; in markdown file.">
   
   
 
@@ -52,7 +64,7 @@ Create">
     <h1 class="title">Phase Theme Optimization</h1>
   
 
-    <time datetime="2015-04-06T07:41:57.438Z">
+    <time datetime="2015-04-06T07:43:11.462Z">
   <span class="day">6</span><span class="month">Apr</span>
 </time>
   </header>
@@ -73,6 +85,7 @@ Create">
 <h2 id="Add_Read_More">Add Read More</h2><p>Replace the below codes in <code>layout\_partial\article.ejs</code><br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (item.excerpt &amp;&amp; index)&#123; <span class="variable">%&gt;</span></span><br><span class="line">  &lt;<span class="variable">%-</span> item.excerpt <span class="variable">%&gt;</span></span><br><span class="line">&lt;% &#125; <span class="keyword">else</span> &#123; <span class="variable">%&gt;</span></span><br><span class="line">  &lt;<span class="variable">%-</span> item.content <span class="variable">%&gt;</span></span><br><span class="line">&lt;% &#125; <span class="variable">%&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>to<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (item.excerpt &amp;&amp; index)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">  </span>&lt;%-<span class="ruby"> item.excerpt </span>%&gt;<span class="xml">      </span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"article-more-link"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> config.root </span>%&gt;<span class="xml"><span class="tag"><span class="value"></span></span></span>&lt;%-<span class="ruby"> item.path </span>%&gt;<span class="xml"><span class="tag"><span class="value">#more"</span>&gt;</span></span>&lt;%=<span class="ruby"> <span class="string">'read more'</span> </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; <span class="keyword">else</span> &#123; </span>%&gt;<span class="xml"></span><br><span class="line">  </span>&lt;%-<span class="ruby"> item.content </span>%&gt;<span class="xml"></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <p>Usage of Read More: add <code>&lt;!--more--&gt;</code> in markdown file.</p>
+<a id="more"></a>
 
     
     
