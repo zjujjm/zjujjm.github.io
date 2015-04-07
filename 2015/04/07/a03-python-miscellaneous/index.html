@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python Learning Miscellaneous | Junmin Blog</title>
+  <meta name="author" content="Junmin">
+
+  
+  <meta name="description" content="Start to learn Python this week, from very fundamental knowledge. Mark issues I meet in this hard and happy process. :)
+Encoding for ChineseDifference systems have different method of encoding. Windows is GBK and linux is UTF8. Whether Chinese can be displayed normally is depended on the correct encoding way. The translate method is:123l_example = &quot;中文&quot; #Original GBKprint l_example #for Windosprint l_example.decode(&#39;gbk&#39;).encode(&#39;utf8&#39;) #for Linux">
+  
+  
+
+  <link rel="alternate" href="/atom.xml" title="Junmin Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+<body>
+  <header id="header" class="inner"><nav>
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="http://junmin.info">About</a></li>
+    
+  </ul>
+</nav></header>
+  <div id="content" class="inner"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <header>
+    
+  
+    <h1 class="title">Python Learning Miscellaneous</h1>
+  
+
+    <time datetime="2015-04-07T13:32:49.927Z">
+  <span class="day">7</span><span class="month">Apr</span>
+</time>
+  </header>
+  <div class="entry-content">
+    
+      <p>Start to learn Python this week, from very fundamental knowledge. Mark issues I meet in this hard and happy process. :)</p>
+<h2 id="Encoding_for_Chinese">Encoding for Chinese</h2><p>Difference systems have different method of encoding. Windows is GBK and linux is UTF8. Whether Chinese can be displayed normally is depended on the correct encoding way. The translate method is:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l_example = <span class="string">"中文"</span> <span class="comment">#Original GBK</span></span><br><span class="line"><span class="keyword">print</span> l_example <span class="comment">#for Windos</span></span><br><span class="line"><span class="keyword">print</span> l_example.decode(<span class="string">'gbk'</span>).encode(<span class="string">'utf8'</span>) <span class="comment">#for Linux</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="Pip_Install_Bug_Fix">Pip Install Bug Fix</h2><p>When installing pip package in DOS CMD, the error occurs:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnicodeEncodeError: <span class="string">'ascii'</span> codec can<span class="string">'t encode character u'</span><span class="string">'\u258f'</span> <span class="keyword">in</span> <span class="attribute">position</span> <span class="number">8</span>: ordinal not <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">128</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+<p><a href="http://my.phirobot.com/blog/2014-02-python_in_windows.html" target="_blank" rel="external">Bug fix</a><br>Insert code to `$PYTHONPATH/Lib/mimetypes.py:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">default_encoding = sys.getdefaultencoding() <span class="comment">#Line 257</span></span><br><span class="line"><span class="keyword">if</span> sys.getdefaultencoding() != <span class="string">'gbk'</span>:</span><br><span class="line">    reload(sys)</span><br><span class="line">sys.setdefaultencoding(<span class="string">'gbk'</span>)</span><br></pre></td></tr></table></figure></p>
+
+    
+    
+    <footer class="meta">
+      
+      
+      
+    </footer>
+    
+  </div>
+  
+</article>
+</div>
+  <footer id="footer" class="inner"><div class="social alignright">
+  
+  
+  
+  
+  <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+</div>
+<p>
+  
+  &copy; 2015 Junmin
+  
+</p>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/google.anlysis.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+
+</body>
+</html>
