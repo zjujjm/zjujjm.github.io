@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Quickfix protocol in python | Junmin Blog</title>
+  <meta name="author" content="Junmin">
+
+  
+  <meta name="description" content="Quickfix official website: quickfixengine.
+Quickfix python API installOrignially, quickfix is a C++ implementation. So, quickfix module in python is a">
+  
+  
+
+  <link rel="alternate" href="/atom.xml" title="Junmin Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+<body>
+  <header id="header" class="inner"><nav>
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="http://junmin.info">About</a></li>
+    
+  </ul>
+</nav></header>
+  <div id="content" class="inner"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <header>
+    
+  
+    <h1 class="title">Quickfix protocol in python</h1>
+  
+
+    <time datetime="2015-04-25T07:11:27.172Z">
+  <span class="day">25</span><span class="month">Apr</span>
+</time>
+  </header>
+  <div class="entry-content">
+    
+      <p>Quickfix official website: <a href="http://www.quickfixengine.org" target="_blank" rel="external">quickfixengine</a>.</p>
+<h2 id="Quickfix_python_API_install">Quickfix python API install</h2><p>Orignially, quickfix is a C++ implementation. So, quickfix module in python is an API to call class and functions of C-module.</p>
+<h3 id="For_Windows">For Windows</h3><p>For windows, no offical guide for compilation yet. Easiest way is using offical built binary package (python 2.7):<br><a href="http://www.lfd.uci.edu/~gohlke//pythonlibs/" target="_blank" rel="external">x86 &amp; amd64</a></p>
+<p>Installation: <code>pip install quickfix-1.14.3-cp27-none-win_amd64.whl</code></p>
+<h3 id="For_Linux">For Linux</h3><p>Requirement: gcc, gcc-c++, python-devel (centOS 6)</p>
+<p>Installation: <code>pii install quickfix</code>. Then compilcation will start automatically.</p>
+<p>Specail case in VPS or Cloud server. Since for a virtual instance, the memory may be small, say less than 1G. Swap is disable by default. Thus, an error might occur because of lack of memory.<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc: Intermal <span class="keyword">error</span>: Killed (program cc1plus)</span><br></pre></td></tr></table></figure></p>
+<p>To temporarily increase the swap memory:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/var/swapfile bs=<span class="number">64</span>M count=<span class="number">32</span> <span class="comment">#Creating 4G memory</span></span><br><span class="line">mkswap /var/swapfile</span><br><span class="line">swapon /var/swapfile</span><br></pre></td></tr></table></figure></p>
+<p>To release aforementioned memory:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">swapoff /var/swapfile</span><br><span class="line">rm /var/swapfile</span><br></pre></td></tr></table></figure></p>
+<h3 id="For_Cygwin">For Cygwin</h3><p>The way is same as for linux: <code>pip install quickfix</code></p>
+<h2 id="Usage_of_quickfix_module">Usage of quickfix module</h2><p>For python, an application should be built as shown in the doc.<br>Some usage to get message field:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> quickfix <span class="keyword">as</span> fix</span><br><span class="line"></span><br><span class="line">msgType = fix.MsgType() <span class="comment"># Define msgType</span></span><br><span class="line">sendingTime = fix.SendingTime() <span class="comment"># Define sendingTime</span></span><br><span class="line">message.getHeader().getField(msgType)</span><br><span class="line">message.getHeader().getField(SendingTime)</span><br><span class="line"></span><br><span class="line"><span class="comment"># To obtain value</span></span><br><span class="line">msgType.getValue()</span><br><span class="line">sendingTime.getString()</span><br></pre></td></tr></table></figure></p>
+
+    
+    
+    <footer class="meta">
+      
+      
+      
+    </footer>
+    
+  </div>
+  
+</article>
+</div>
+  <footer id="footer" class="inner"><div class="social alignright">
+  
+  
+  
+  
+  <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+</div>
+<p>
+  
+  &copy; 2015 Junmin
+  
+</p>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/google.anlysis.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+
+</body>
+</html>
